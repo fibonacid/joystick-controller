@@ -20,14 +20,11 @@ void setup() {
 }
 
 void loop() {
-  Serial.print("Switch:\t");
-  Serial.print(digitalRead(SW_pin));
-  Serial.print("\n");
-  Serial.print("X-axis:\t");
   Serial.print(analogRead(X_pin));
-  Serial.print("\n");
-  Serial.print("Y-axis:\t");
+  Serial.print(",");
   Serial.print(analogRead(Y_pin));
-  Serial.print("\n\n");
+  Serial.print(",");
+  Serial.print(!digitalRead(SW_pin));
+  Serial.print("\n");
   delay(500);
 }
