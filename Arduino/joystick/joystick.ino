@@ -26,5 +26,5 @@ void loop() {
   Serial.print(",");
   Serial.print(!digitalRead(SW_pin));
   Serial.print("\n");
-  delay(500);
+  delay(100);
 }
