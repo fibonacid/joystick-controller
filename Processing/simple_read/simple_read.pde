@@ -15,6 +15,6 @@ void setup()
 
 void draw() {
   if ( myPort.available() > 0) {  // If data is available,
-    print(myPort.read());         // read it
+    print(myPort.readString());         // read it
   }
 }
