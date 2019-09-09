@@ -48,9 +48,6 @@ void setup() {
 
   // Start serial comunication
   Serial.begin(115200);
-  Serial.print("\n");
-  // The receiver should wait for this message
-  Serial.print("begin\n"); 
 }
 
 /**
@@ -59,7 +56,6 @@ void setup() {
  */
 void loop() {
 
-  // Get time
   int current_time = millis();
   
   // Get sensor data
@@ -102,7 +98,7 @@ void loop() {
   } 
 
   first_loop = false;
-  delay(50);
+  delay(100);
 }
 
 /**
@@ -132,4 +128,4 @@ boolean valuesChanged(int x, int y, int sw) {
   return abs(x - last_x) >= minimum ||
          abs(y - last_y) >= minimum || 
          sw != last_sw;
-}
+}  
