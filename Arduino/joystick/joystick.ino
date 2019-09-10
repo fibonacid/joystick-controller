@@ -1,11 +1,15 @@
 /**
- * ============================================
+ * ===============================================
  * title: Joystick Controller
  * author: Lorenzo Rivosecchi 
- * version: 0.0.1
- * data: 01/09/2019
- * ============================================
- * see https://www.youtube.com/watch?v=MlDi0vO9Evg
+ * version: 1.0.0
+ * data: 10/09/2019
+ * ================================================
+ * This project consist of a Joystick Controller 
+ * that emits data over a USB connection.
+ * The device enables yout to control your 
+ * program of choice through a well known interface 
+ * that achieves a great level of embodiment.
  */
 
 // Arduino Pin numbers
