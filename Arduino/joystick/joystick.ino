@@ -63,8 +63,8 @@ void loop() {
   int ty = 512 - x;
 
   // Fix precision
-  tx -= y_at_rest;
-  ty -= x_at_rest;
+  //tx -= y_at_rest;
+  //ty -= x_at_rest;
 
   // Protect from exceeding the nominal bounds.
   tx = constrain(tx, -512, 512);
