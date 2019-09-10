@@ -24,6 +24,7 @@ int y_at_rest;
 // Led stuff
 int led_brightness;
 int led_counter = 0;
+int led_increment = 10;
 
 // Program flow
 boolean first_loop = true;
@@ -52,8 +53,6 @@ void setup() {
  */
 void loop() {
 
-  int current_time = millis();
-  
   // Get sensor data
   int x = analogRead(X_pin);
   int y = analogRead(Y_pin);
@@ -84,16 +83,26 @@ void loop() {
     Serial.print(",");
     Serial.print(sw);
     Serial.print("\n");
-    // Calculate distance from center
-    int dist = sqrt(tx^2 + ty^2);
-    // Normalize it
-    int ndist = dist / 512;
+    // Calculate distance from center,
+    int dist = sqrt( pow(tx,2) + pow(ty, 2) );
+    // Set led blink speed based on that value.
+    led_increment = 5 + 175 * (dist / 512.0);
   }
 
-  led_counter+= 20;
-  led_brightness = 40 + (0.5 + 0.5 * sin(radians(led_counter))) * 205;
+  // If switch is being clicked
+  if (sw == 1) {
+    // Set led brightness to 0.
+    led_brightness = 0;
+  } 
+  // Else: if switch is not being clicked
+  else {
+    // Let led blink.
+    led_counter += led_increment;
+    led_brightness =  20 + 235 * (0.5 + 0.5 * sin(radians(led_counter))); 
+  }
+  // Set led pwm value
   analogWrite(LED_pin, led_brightness);
-
+  
   first_loop = false;
   delay(100);
 }
