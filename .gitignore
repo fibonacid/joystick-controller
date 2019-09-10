@@ -2,10 +2,10 @@
 .DS_Store
 
 # Media
-*.wav
-*.aif
-*.aiff
-*.mp3
-*.mp4
-*.mov
+#*.wav
+#*.aif
+#*.aiff
+#*.mp3
+#*.mp4
+#*.mov
 
