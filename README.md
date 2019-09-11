@@ -5,7 +5,7 @@ This project involves an Arduino board, a black plastic box and Joystick control
 The goal is to create a physical interface that enables the user to manipulate multi-dimensional data spaces in the most simple and cost effective way.
 
 I decided to give it a shot with a joystick controller: 
-an input device consisting in a stick that pivots on a base and reports its angle or direction to the device it is controlling [wiki](https://en.wikipedia.org/wiki/Joystick)
+an input device consisting in a stick that pivots on a base and reports its angle or direction to the device it is controlling [[wiki]](https://en.wikipedia.org/wiki/Joystick)
 
 From this kind of sensor you can extrapolate many values and gestures such as the XY position of the “cursor” or  its distance from the center of the plane or from all its 4 corners.
 Discrete gestures are also possible: most joysticks can be clicked and with software one could decode arrow like commands such as UP, RIGHT, DOWN & LEFT and its doubled counterparts.
